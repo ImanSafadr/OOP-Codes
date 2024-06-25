@@ -1,0 +1,37 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+class string 
+{
+	private:
+		char name[20];
+		public:
+			string(){
+				strcpy(name," ");
+			}
+			string(char n[])
+			{strcpy(name,n);
+					}
+					void input()
+					{
+						
+						cout<<name;
+					}
+					string operator+(string s)
+					{
+						string temp;
+						strcpy(temp.name,name);
+						strcat(temp.name,s.name);
+						return temp;
+						
+					}
+};
+ int main()
+ {
+ 	string str1,str2,str3;
+ 	str1.input();
+ 	str2.input();
+ 	str3=str1+str2;
+ 	str3.display();
+ 	return 0;
+ }
