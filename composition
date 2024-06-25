@@ -1,0 +1,80 @@
+#include<iostream>
+using namespace std;
+class employee
+{
+	private:
+		char name[10];
+	public:
+		void getdata()
+		{
+			cout<<"Enter name";
+			cin>>name;
+			}	
+			void putdata()
+			{
+				cout<<"name is"<<name<<endl;
+				
+			}
+};
+ class student
+ {
+ 	private:
+ 		char degree[10];
+ 		public:
+ 			void getedu()
+		{
+			cout<<"Enter degree";
+			cin>>degree;
+			}	
+			void putedu()
+			{
+				cout<<"degree is"<<degree<<endl;
+				
+			}
+ 			
+ };
+ class teacher
+ {
+ 	private:
+ 		employee emp;
+ 		student stu;
+ 		int publications;
+ 		public:
+ 			void getdata()
+ 			{
+ 				emp.getdata();
+ 				stu.getedu();
+ 				cout<<"Enter the publications";
+ 				cin>>publications;
+ 				
+			 }
+			 void putdata()
+			 {
+			 	emp.putdata();
+			 	stu.getedu();
+			 	cout<<"publications"<<publications<<endl;
+			 	
+			 }		
+ };
+  int main()
+  {
+  	teacher t1,t2;
+  	t1.getdata();
+  	t2.getdata();
+  	cout<<"*****************";
+  	t1.putdata();
+  	t2.putdata();
+  	return 0;
+  }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
